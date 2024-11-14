@@ -2,19 +2,35 @@
 //
 
 #include <iostream>
+#include <vector>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    float a, b, c;
+    vector<float> solutions;
+
+    cout << "Entrez les paramètres a, b et c de l'équation" << endl;
+    cout << "Valeur de a : ";
+    cin >> a;
+    cout << "\nValeur de b : ";
+    cin >> b;
+    cout << "\nValeur de c : ";
+    cin >> c;
+
+    solutions = solveur(a, b, c);
+
+    int number_of_solutions = solutions.size();
+    switch (number_of_solutions) {
+    case 0:
+        cout << "Pas de solutions" << endl;
+        break;
+    case 1:
+        cout << "L'équation a une solution unique: X = " << solutions[0] << endl;
+        break;
+    case 2:
+        cout << "L'équation a deux solutions: X1 = " << solutions[0] << "; X2 = " << solutions[1] << endl;
+        break;
+    }
+    return 0;
 }
-
-// Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
-// Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
-
-// Astuces pour bien démarrer : 
-//   1. Utilisez la fenêtre Explorateur de solutions pour ajouter des fichiers et les gérer.
-//   2. Utilisez la fenêtre Team Explorer pour vous connecter au contrôle de code source.
-//   3. Utilisez la fenêtre Sortie pour voir la sortie de la génération et d'autres messages.
-//   4. Utilisez la fenêtre Liste d'erreurs pour voir les erreurs.
-//   5. Accédez à Projet > Ajouter un nouvel élément pour créer des fichiers de code, ou à Projet > Ajouter un élément existant pour ajouter des fichiers de code existants au projet.
-//   6. Pour rouvrir ce projet plus tard, accédez à Fichier > Ouvrir > Projet et sélectionnez le fichier .sln.
