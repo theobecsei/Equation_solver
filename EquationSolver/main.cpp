@@ -2,10 +2,27 @@
 //
 
 #include <iostream>
+#include <vector>
+using namespace std;
+
+float solve(const float& a, const float &b);
 
 int main()
 {
     std::cout << "Hello World!\n";
+}
+
+
+vector<float> solve(const float& a, const float &b, const float &c){
+    vector<float> result;
+    float discriminant = b*b-4*a*c;
+    if(abs(discriminant)<0.00001){
+        result.push_back(-b/(2*a));
+    } else if(discriminant > 0){
+        result.push_back(-b-sqrt(discriminant)/(2*a));
+        result.push_back(-b+sqrt(discriminant)/(2*a));
+    }
+    return result;
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

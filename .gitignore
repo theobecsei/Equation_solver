@@ -6,5 +6,8 @@
 *.so
 *.dll
 *.class
+*.json
 *.jar
 *.exe
+
+.vdcode/*
