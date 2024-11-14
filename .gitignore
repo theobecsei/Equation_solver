@@ -6,6 +6,7 @@
 *.so
 *.dll
 *.class
+*.json
 *.jar
 *.exe
 *.opendb
