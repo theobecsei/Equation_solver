@@ -1,1 +1,10 @@
 *.log
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.class
+*.jar
+*.exe
